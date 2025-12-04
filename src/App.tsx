@@ -1,7 +1,11 @@
-import './App.css';
+import EmbersBackground from './components/EmbersBackground';
 
 function App() {
-  return <></>;
+  return (
+    <div>
+      <EmbersBackground />
+    </div>
+  );
 }
 
 export default App;
