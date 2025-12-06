@@ -1,6 +1,6 @@
-import type { UserProfile } from '../types/profile';
+import type { User } from '../types/profile';
 
-export const profileData: UserProfile = {
+export const PROFILE: User = {
   firstName: 'Alex',
   lastName: 'Huaracha',
   displayName: 'Alex Huaracha',
@@ -13,7 +13,7 @@ export const profileData: UserProfile = {
   ],
   address: 'Arequipa City, Perú',
   phoneNumber: 'KzUxOTYyMzM0NzEy',
-  email: 'alexhuarachaq@gmail.com',
+  email: 'YWxleGh1YXJhY2hhcUBnbWFpbC5jb20=',
   website: '----',
   jobTitle: 'Backend Developer',
   about: `
