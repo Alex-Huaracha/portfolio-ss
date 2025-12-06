@@ -1,9 +1,10 @@
-import { GlobeIcon, MapPinIcon, MarsIcon, VenusIcon } from 'lucide-react';
+import { GlobeIcon, MapPinIcon, MarsIcon } from 'lucide-react';
 import { PROFILE } from '../../data/profile';
 import { Item, ItemContent, ItemIcon, ItemLink } from './item';
 import { CurrentLocalTimeItem } from './current-local-time-item';
 import { PhoneItem } from './PhoneItem';
 import { EmailItem } from './email-item';
+import { urlToName } from '../../utils/url';
 
 export function Overview() {
   return (
@@ -30,6 +31,29 @@ export function Overview() {
       <PhoneItem phoneNumber={PROFILE.phoneNumber} />
       {/* Email */}
       <EmailItem email={PROFILE.email} />
+      {/* Website */}
+      <Item>
+        <ItemIcon>
+          <GlobeIcon />
+        </ItemIcon>
+        <ItemContent>
+          <ItemLink
+            href={PROFILE.website}
+            aria-label={`Personal website: ${urlToName(PROFILE.website)}`}
+          >
+            {urlToName(PROFILE.website)}
+          </ItemLink>
+        </ItemContent>
+      </Item>
+      {/* Me */}
+      <Item>
+        <ItemIcon>
+          <MarsIcon />
+        </ItemIcon>
+        <ItemContent aria-label={`Pronouns: ${PROFILE.pronouns}`}>
+          {PROFILE.pronouns}
+        </ItemContent>
+      </Item>
     </div>
   );
 }
