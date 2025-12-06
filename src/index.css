@@ -1,1 +1,36 @@
 @import 'tailwindcss';
+
+@layer utilities {
+  .screen-line-before {
+    @apply relative before:absolute before:top-0 before:-left-[100vw] before:-z-10 before:h-px before:w-[200vw] before:bg-edge;
+  }
+
+  .screen-line-after {
+    @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:-z-10 after:h-px after:w-[200vw] after:bg-edge;
+  }
+}
+
+:root {
+  /* Light theme (default) */
+  --background: oklch(1 0 0);
+
+  /* zinc-200 */
+  --border: oklch(0.92 0.004 286.32);
+
+  /* color-mix */
+  --edge: color-mix(in oklab, var(--border) 64%, var(--background));
+
+  /* zinc-100 */
+  --muted: oklch(0.967 0.001 286.375);
+
+  /* zinc-500 */
+  --muted-foreground: oklch(0.552 0.016 285.938);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-border: var(--border);
+  --color-edge: var(--edge);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+}
