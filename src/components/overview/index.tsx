@@ -5,55 +5,62 @@ import { CurrentLocalTimeItem } from './current-local-time-item';
 import { PhoneItem } from './PhoneItem';
 import { EmailItem } from './email-item';
 import { urlToName } from '../../utils/url';
+import { Panel, PanelContent } from '../panel';
 
 export function Overview() {
   return (
-    <div className="grid gap-x-12 gap-y-2.5 sm:grid-cols-2">
-      {/* Address */}
-      <Item>
-        <ItemIcon>
-          <MapPinIcon />
-        </ItemIcon>
-        <ItemContent>
-          <ItemLink
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-              PROFILE.address
-            )}`}
-            aria-label={`Location: ${PROFILE.address}`}
-          >
-            {PROFILE.address}
-          </ItemLink>
-        </ItemContent>
-      </Item>
-      {/* Current Time */}
-      <CurrentLocalTimeItem timeZone={PROFILE.timeZone} />
-      {/* Phone */}
-      <PhoneItem phoneNumber={PROFILE.phoneNumber} />
-      {/* Email */}
-      <EmailItem email={PROFILE.email} />
-      {/* Website */}
-      <Item>
-        <ItemIcon>
-          <GlobeIcon />
-        </ItemIcon>
-        <ItemContent>
-          <ItemLink
-            href={PROFILE.website}
-            aria-label={`Personal website: ${urlToName(PROFILE.website)}`}
-          >
-            {urlToName(PROFILE.website)}
-          </ItemLink>
-        </ItemContent>
-      </Item>
-      {/* Me */}
-      <Item>
-        <ItemIcon>
-          <MarsIcon />
-        </ItemIcon>
-        <ItemContent aria-label={`Pronouns: ${PROFILE.pronouns}`}>
-          {PROFILE.pronouns}
-        </ItemContent>
-      </Item>
-    </div>
+    <Panel>
+      <h2 className="sr-only">Overview</h2>
+
+      <PanelContent>
+        <div className="grid gap-x-12 gap-y-2.5 sm:grid-cols-2">
+          {/* Address */}
+          <Item>
+            <ItemIcon>
+              <MapPinIcon />
+            </ItemIcon>
+            <ItemContent>
+              <ItemLink
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                  PROFILE.address
+                )}`}
+                aria-label={`Location: ${PROFILE.address}`}
+              >
+                {PROFILE.address}
+              </ItemLink>
+            </ItemContent>
+          </Item>
+          {/* Current Time */}
+          <CurrentLocalTimeItem timeZone={PROFILE.timeZone} />
+          {/* Phone */}
+          <PhoneItem phoneNumber={PROFILE.phoneNumber} />
+          {/* Email */}
+          <EmailItem email={PROFILE.email} />
+          {/* Website */}
+          <Item>
+            <ItemIcon>
+              <GlobeIcon />
+            </ItemIcon>
+            <ItemContent>
+              <ItemLink
+                href={PROFILE.website}
+                aria-label={`Personal website: ${urlToName(PROFILE.website)}`}
+              >
+                {urlToName(PROFILE.website)}
+              </ItemLink>
+            </ItemContent>
+          </Item>
+          {/* Me */}
+          <Item>
+            <ItemIcon>
+              <MarsIcon />
+            </ItemIcon>
+            <ItemContent aria-label={`Pronouns: ${PROFILE.pronouns}`}>
+              {PROFILE.pronouns}
+            </ItemContent>
+          </Item>
+        </div>
+      </PanelContent>
+    </Panel>
   );
 }

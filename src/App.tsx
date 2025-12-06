@@ -9,6 +9,7 @@ export default function App() {
       <ProfileHeader />
       <Separator />
       <Overview />
+      <Separator />
     </div>
   );
 }
