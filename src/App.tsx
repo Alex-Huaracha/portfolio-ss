@@ -1,4 +1,5 @@
-import ProfileHeader from './components/ProfileHeader';
+import { ProfileHeader } from './components/profile-header';
+import { Overview } from './components/overview';
 import { cn } from './lib/utils';
 
 export default function App() {
@@ -7,6 +8,7 @@ export default function App() {
       <h1>Welcome to the App</h1>
       <ProfileHeader />
       <Separator />
+      <Overview />
     </div>
   );
 }
