@@ -12,7 +12,7 @@ export const profileData: UserProfile = {
     'Open Source Contributor',
   ],
   address: 'Arequipa City, Perú',
-  phoneNumber: '+51 962 334 712',
+  phoneNumber: 'KzUxOTYyMzM0NzEy',
   email: 'alexhuarachaq@gmail.com',
   website: '----',
   jobTitle: 'Backend Developer',
