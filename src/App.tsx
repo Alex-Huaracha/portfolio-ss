@@ -1,32 +1,25 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import EmbersBackground from './components/EmbersBackground';
-import Sidebar from './components/Sidebar';
-
-const About = () => <div className="text-white">About Section</div>;
-const Experience = () => <div className="text-white">Experience Section</div>;
-const Projects = () => <div className="text-white">Projects Section</div>;
+import ProfileHeader from './components/ProfileHeader';
+import { cn } from './lib/utils';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="relative w-full h-screen overflow-hidden bg-black text-white font-sans selection:bg-red-500/30">
-        <EmbersBackground />
+    <div className="mx-auto md:max-w-3xl *:[[id]]:scroll-mt-22">
+      <h1>Welcome to the App</h1>
+      <ProfileHeader />
+      <Separator />
+    </div>
+  );
+}
 
-        <div className="relative z-10 flex h-full p-30 gap-6">
-          <div className="flex items-center">
-            <Sidebar />
-          </div>
-
-          <main className="flex-1 rounded-3xl border border-white/5 bg-zinc-900/20 backdrop-blur-xs flex items-center justify-center relative overflow-hidden">
-            <Routes>
-              <Route path="/" element={<Navigate to="/about" replace />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/projects" element={<Projects />} />
-            </Routes>
-          </main>
-        </div>
-      </div>
-    </BrowserRouter>
+function Separator({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        'relative flex h-8 w-full border-x border-edge',
+        'before:absolute before:-left-[100vw] before:-z-1 before:h-8 before:w-[200vw]',
+        'before:bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] before:bg-size-[10px_10px] before:[--pattern-foreground:var(--color-edge)]/56',
+        className
+      )}
+    />
   );
 }
