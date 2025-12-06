@@ -3,13 +3,13 @@ import profileImage from '../assets/img/profile.avif';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-function ProfileHeader() {
+export function ProfileHeader() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % profileData.flipSentences.length);
-    }, 3000); // Cambia cada 3 segundos
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -77,5 +77,3 @@ function ProfileHeader() {
     </div>
   );
 }
-
-export default ProfileHeader;
