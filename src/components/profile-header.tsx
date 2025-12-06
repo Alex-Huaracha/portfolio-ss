@@ -1,4 +1,4 @@
-import { profileData } from '../data/profile';
+import { PROFILE } from '../data/profile';
 import profileImage from '../assets/img/profile.avif';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
@@ -8,7 +8,7 @@ export function ProfileHeader() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % profileData.flipSentences.length);
+      setCurrentIndex((prev) => (prev + 1) % PROFILE.flipSentences.length);
     }, 3000);
 
     return () => clearInterval(interval);
@@ -20,7 +20,7 @@ export function ProfileHeader() {
         <div className="mx-0.5 my-[3px]">
           <img
             className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40"
-            alt={`${profileData.displayName}'s avatar`}
+            alt={`${PROFILE.displayName}'s avatar`}
             src={profileImage}
             fetchPriority="high"
           />
@@ -55,7 +55,7 @@ export function ProfileHeader() {
         <div className="border-t border-edge">
           <div className="flex items-center gap-2 pl-4">
             <h1 className="-translate-y-px text-3xl font-semibold">
-              {profileData.displayName}
+              {PROFILE.displayName}
             </h1>
           </div>
           <div className="h-12.5 border-t border-edge py-1 pl-4 sm:h-9">
@@ -68,7 +68,7 @@ export function ProfileHeader() {
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
                 className=" font-mono text-sm text-balance text-muted-foreground"
               >
-                {profileData.flipSentences[currentIndex]}
+                {PROFILE.flipSentences[currentIndex]}
               </motion.p>
             </AnimatePresence>
           </div>
