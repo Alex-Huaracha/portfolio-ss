@@ -7,8 +7,8 @@ export const profileData: UserProfile = {
   gender: 'male',
   pronouns: 'he/him',
   flipSentences: [
+    'Backend Developer',
     'Creating with code. Small details matter.',
-    'Design Engineer',
     'Open Source Contributor',
   ],
   address: 'Arequipa City, Perú',
