@@ -10,9 +10,13 @@
   }
 }
 
+/* Light theme (default) */
 :root {
-  /* Light theme (default) */
+  /* white */
   --background: oklch(1 0 0);
+
+  /* zinc-950 */
+  --foreground: oklch(0.141 0.005 285.823);
 
   /* zinc-200 */
   --border: oklch(0.92 0.004 286.32);
@@ -29,6 +33,7 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-foreground: var(--foreground);
   --color-border: var(--border);
   --color-edge: var(--edge);
   --color-muted: var(--muted);
