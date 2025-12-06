@@ -1,8 +1,9 @@
 import { GlobeIcon, MapPinIcon, MarsIcon, VenusIcon } from 'lucide-react';
-import { profileData } from '../../data/profile';
+import { PROFILE } from '../../data/profile';
 import { Item, ItemContent, ItemIcon, ItemLink } from './item';
 import { CurrentLocalTimeItem } from './current-local-time-item';
 import { PhoneItem } from './PhoneItem';
+import { EmailItem } from './email-item';
 
 export function Overview() {
   return (
@@ -15,18 +16,20 @@ export function Overview() {
         <ItemContent>
           <ItemLink
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-              profileData.address
+              PROFILE.address
             )}`}
-            aria-label={`Location: ${profileData.address}`}
+            aria-label={`Location: ${PROFILE.address}`}
           >
-            {profileData.address}
+            {PROFILE.address}
           </ItemLink>
         </ItemContent>
       </Item>
       {/* Current Time */}
-      <CurrentLocalTimeItem timeZone={profileData.timeZone} />
+      <CurrentLocalTimeItem timeZone={PROFILE.timeZone} />
       {/* Phone */}
-      <PhoneItem phoneNumber={profileData.phoneNumber} />
+      <PhoneItem phoneNumber={PROFILE.phoneNumber} />
+      {/* Email */}
+      <EmailItem email={PROFILE.email} />
     </div>
   );
 }
