@@ -12,6 +12,12 @@ export type User = {
   website: string;
   /** Primary/current role shown on profile */
   jobTitle: string;
+  /** Work history entries */
+  jobs: {
+    title: string;
+    company: string;
+    website: string;
+  }[];
   /** Rich about section; supports Markdown */
   about: string;
   /** Public URL to avatar image */

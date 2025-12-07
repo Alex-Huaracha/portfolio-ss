@@ -6,13 +6,24 @@ import { PhoneItem } from './PhoneItem';
 import { EmailItem } from './email-item';
 import { urlToName } from '../../utils/url';
 import { Panel, PanelContent } from '../panel';
+import { JobItem } from './JobItem';
 
 export function Overview() {
   return (
     <Panel>
       <h2 className="sr-only">Overview</h2>
 
-      <PanelContent>
+      <PanelContent className="space-y-2.5">
+        {PROFILE.jobs.map((job, index) => {
+          return (
+            <JobItem
+              key={index}
+              title={job.title}
+              company={job.company}
+              website={job.website}
+            />
+          );
+        })}
         <div className="grid gap-x-12 gap-y-2.5 sm:grid-cols-2">
           {/* Address */}
           <Item>

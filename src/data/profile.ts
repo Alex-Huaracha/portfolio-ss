@@ -16,6 +16,13 @@ export const PROFILE: User = {
   email: 'YWxleGh1YXJhY2hhcUBnbWFpbC5jb20=',
   website: '----',
   jobTitle: 'Backend Developer',
+  jobs: [
+    {
+      title: 'Backend Developer',
+      company: '',
+      website: '',
+    },
+  ],
   about: `
   - A Systems Engineering graduate from National University of San Agustin with a strong interest in **Back-End Development** and **Machine Learning**.
   - Skilled in **Node.js**, **Express**, and **Django** for building robust server-side applications.
