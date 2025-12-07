@@ -2,6 +2,7 @@ import { ProfileHeader } from './components/profile-header';
 import { Overview } from './components/overview';
 import { cn } from './lib/utils';
 import { ProfileCover } from './components/profile-cover';
+import { SocialLinks } from './components/social-links';
 
 export default function App() {
   return (
@@ -12,6 +13,9 @@ export default function App() {
         <Separator />
 
         <Overview />
+        <Separator />
+
+        <SocialLinks />
         <Separator />
       </div>
     </main>
