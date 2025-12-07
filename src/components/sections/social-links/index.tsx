@@ -1,5 +1,5 @@
-import { SOCIAL_LINKS } from '../../data/social-links';
-import { Panel } from '../panel';
+import { SOCIAL_LINKS } from '../../../data/social-links';
+import { Panel } from '../../layout/panel';
 import { SocialLinkItem } from './social-link-item';
 
 export function SocialLinks() {

@@ -1,6 +1,6 @@
 import { PhoneIcon } from 'lucide-react';
-import { useIsClient } from '../../hooks/use-is-client';
-import { decodePhoneNumber, formatPhoneNumber } from '../../utils/string';
+import { useIsClient } from '../../../hooks/use-is-client';
+import { decodePhoneNumber, formatPhoneNumber } from '../../../utils/string';
 import { Item, ItemContent, ItemIcon, ItemLink } from './item';
 
 type PhoneItemProps = {

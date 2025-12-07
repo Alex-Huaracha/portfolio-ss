@@ -1,7 +1,7 @@
-import { PROFILE } from '../data/profile';
-import profileImage from '../assets/img/profile.avif';
+import { PROFILE } from '../../data/profile';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import profileImage from '../../assets/img/profile.avif';
 
 export function ProfileHeader() {
   const [currentIndex, setCurrentIndex] = useState(0);

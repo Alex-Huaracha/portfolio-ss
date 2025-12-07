@@ -1,5 +1,5 @@
-import { cn } from '../lib/utils';
-import { AlexHuarachaMark } from './ui/alexhuarahca-mark';
+import { cn } from '../../lib/utils';
+import { AlexHuarachaMark } from '../ui/alexhuarahca-mark';
 
 export function ProfileCover() {
   return (

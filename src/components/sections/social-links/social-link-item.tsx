@@ -1,6 +1,6 @@
 import { ArrowUpRightIcon } from 'lucide-react';
-import type { SocialLink } from '../../types/social-links';
-import { cn } from '../../lib/utils';
+import type { SocialLink } from '../../../types/social-links';
+import { cn } from '../../../lib/utils';
 
 export function SocialLinkItem({ icon, title, description, href }: SocialLink) {
   return (

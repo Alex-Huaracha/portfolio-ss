@@ -1,5 +1,5 @@
-import { useIsClient } from '../../hooks/use-is-client';
-import { decodeEmail } from '../../utils/string';
+import { useIsClient } from '../../../hooks/use-is-client';
+import { decodeEmail } from '../../../utils/string';
 import { Item, ItemContent, ItemIcon, ItemLink } from './item';
 import { MailIcon } from 'lucide-react';
 

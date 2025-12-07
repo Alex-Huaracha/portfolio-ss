@@ -1,8 +1,9 @@
-import { ProfileHeader } from './components/profile-header';
-import { Overview } from './components/overview';
 import { cn } from './lib/utils';
-import { ProfileCover } from './components/profile-cover';
-import { SocialLinks } from './components/social-links';
+import { ProfileCover } from './components/sections/profile-cover';
+import { ProfileHeader } from './components/sections/profile-header';
+import { Overview } from './components/sections/overview';
+import { SocialLinks } from './components/sections/social-links';
+import { About } from './components/sections/about';
 
 export default function App() {
   return (
@@ -17,6 +18,8 @@ export default function App() {
 
         <SocialLinks />
         <Separator />
+
+        <About />
       </div>
     </main>
   );
