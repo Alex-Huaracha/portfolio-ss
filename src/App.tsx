@@ -1,16 +1,20 @@
 import { ProfileHeader } from './components/profile-header';
 import { Overview } from './components/overview';
 import { cn } from './lib/utils';
+import { ProfileCover } from './components/profile-cover';
 
 export default function App() {
   return (
-    <div className="mx-auto md:max-w-3xl *:[[id]]:scroll-mt-22">
-      <h1>Welcome to the App</h1>
-      <ProfileHeader />
-      <Separator />
-      <Overview />
-      <Separator />
-    </div>
+    <main className="max-w-screen overflow-x-hidden px-2">
+      <div className="mx-auto md:max-w-3xl *:[[id]]:scroll-mt-22">
+        <ProfileCover />
+        <ProfileHeader />
+        <Separator />
+
+        <Overview />
+        <Separator />
+      </div>
+    </main>
   );
 }
 
