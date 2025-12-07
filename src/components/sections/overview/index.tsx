@@ -2,11 +2,11 @@ import { GlobeIcon, MapPinIcon, MarsIcon } from 'lucide-react';
 import { PROFILE } from '../../../data/profile';
 import { Item, ItemContent, ItemIcon, ItemLink } from './item';
 import { CurrentLocalTimeItem } from './current-local-time-item';
-import { PhoneItem } from './PhoneItem';
+import { PhoneItem } from './phone-item';
 import { EmailItem } from './email-item';
 import { urlToName } from '../../../utils/url';
 import { Panel, PanelContent } from '../../layout/panel';
-import { JobItem } from './JobItem';
+import { JobItem } from './job-item';
 
 export function Overview() {
   return (
