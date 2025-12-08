@@ -24,7 +24,7 @@ export const PROFILE: User = {
     },
   ],
   about: `
-  - A Systems Engineering graduate from National University of San Agustin with a strong interest in **Back-End Development** and **Machine Learning**.
+  - A **Systems Engineering** graduate from National University of San Agustin with a strong interest in **Back-End Development** and **Machine Learning**.
   - Skilled in **Node.js**, **Express**, and **Django** for building robust server-side applications.
   - Passionate about exploring new technologies and turning ideas into reality through polished, thoughtfully crafted personal projects.
   `,
