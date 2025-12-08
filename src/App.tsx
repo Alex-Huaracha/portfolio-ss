@@ -4,11 +4,13 @@ import { ProfileHeader } from './components/sections/profile-header';
 import { Overview } from './components/sections/overview';
 import { SocialLinks } from './components/sections/social-links';
 import { About } from './components/sections/about';
+import { ThemeToggle } from './components/ui/theme-toggle';
 
 export default function App() {
   return (
     <main className="max-w-screen overflow-x-hidden px-2">
       <div className="mx-auto md:max-w-3xl *:[[id]]:scroll-mt-22">
+        <ThemeToggle />
         <ProfileCover />
         <ProfileHeader />
         <Separator />
