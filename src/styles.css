@@ -1,0 +1,122 @@
+@import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+
+/* Dark Mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  .screen-line-before {
+    @apply relative before:absolute before:top-0 before:-left-[100vw] before:-z-10 before:h-px before:w-[200vw] before:bg-edge;
+  }
+
+  .screen-line-after {
+    @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:-z-10 after:h-px after:w-[200vw] after:bg-edge;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-edge: var(--edge);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-ring: var(--ring);
+  --color-selection: var(--selection);
+  --color-selection-foreground: var(--selection-foreground);
+}
+
+/* Light theme (default) */
+:root {
+  /* white */
+  --background: oklch(1 0 0);
+
+  /* zinc-950 */
+  --foreground: oklch(0.141 0.005 285.823);
+
+  /* zinc-200 */
+  --border: oklch(0.92 0.004 286.32);
+
+  /* color-mix */
+  --edge: color-mix(in oklab, var(--border) 64%, var(--background));
+
+  /* zinc-100 */
+  --muted: oklch(0.967 0.001 286.375);
+
+  /* zinc-500 */
+  --muted-foreground: oklch(0.552 0.016 285.938);
+
+  /* zinc-400 */
+  --ring: oklch(0.705 0.015 286.067);
+
+  /* zinc-950 */
+  --selection: oklch(0.141 0.005 285.823);
+
+  /* zinc-50 */
+  --selection-foreground: oklch(0.985 0 0);
+}
+
+.dark {
+  /* zinc-950 */
+  --background: oklch(0.141 0.005 285.823);
+
+  /* zinc-50 */
+  --foreground: oklch(0.985 0 0);
+
+  /* zinc-800 */
+  --border: oklch(0.274 0.006 286.033);
+
+  /* zinc-800 */
+  --muted: oklch(0.274 0.006 286.033);
+
+  /* zinc-400 */
+  --muted-foreground: oklch(0.705 0.015 286.067);
+
+  /* zinc-500 */
+  --ring: oklch(0.552 0.016 285.938);
+
+  /* zinc-50 */
+  --selection: oklch(0.985 0 0);
+
+  /* zinc-950 */
+  --selection-foreground: oklch(0.141 0.005 285.823);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    @apply border-border outline-ring/50;
+  }
+
+  ::selection {
+    @apply bg-selection text-selection-foreground;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 5px;
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  [id] {
+    @apply scroll-mt-18;
+  }
+}
