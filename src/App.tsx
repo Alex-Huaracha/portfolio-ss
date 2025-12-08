@@ -5,6 +5,7 @@ import { Overview } from './components/sections/overview';
 import { SocialLinks } from './components/sections/social-links';
 import { About } from './components/sections/about';
 import { ThemeToggle } from './components/ui/theme-toggle';
+import { TechStack } from './components/sections/tech-stack';
 
 export default function App() {
   return (
@@ -22,6 +23,9 @@ export default function App() {
         <Separator />
 
         <About />
+        <Separator />
+
+        <TechStack />
       </div>
     </main>
   );
