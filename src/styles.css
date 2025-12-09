@@ -26,6 +26,8 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-ring: var(--ring);
+  --color-info: var(--info);
+
   --color-selection: var(--selection);
   --color-selection-foreground: var(--selection-foreground);
 }
@@ -55,6 +57,8 @@
 
   /* zinc-500 */
   --muted-foreground: oklch(0.552 0.016 285.938);
+
+  --info: oklch(0.67 0.17 244.98);
 
   /* zinc-400 */
   --ring: oklch(0.705 0.015 286.067);
