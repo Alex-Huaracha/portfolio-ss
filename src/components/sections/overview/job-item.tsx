@@ -1,6 +1,6 @@
 import { CodeXmlIcon } from 'lucide-react';
 
-import { Item, ItemContent, ItemIcon, ItemLink } from './item';
+import { Item, ItemContent, ItemIcon } from './item';
 
 type JobItemProps = {
   title: string;
@@ -8,7 +8,7 @@ type JobItemProps = {
   website: string;
 };
 
-export function JobItem({ title, company, website }: JobItemProps) {
+export function JobItem({ title }: JobItemProps) {
   return (
     <Item>
       <ItemIcon>
