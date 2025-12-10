@@ -21,6 +21,9 @@
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
 
+  --color-accent: var(--accent);
+  --color-accent2: var(--accent2);
+
   --color-border: var(--border);
   --color-edge: var(--edge);
   --color-muted: var(--muted);
@@ -66,10 +69,15 @@
   /* zinc-500 */
   --muted-foreground: oklch(0.552 0.016 285.938);
 
-  --info: oklch(0.67 0.17 244.98);
+  /* zinc-100 */
+  --accent: oklch(0.967 0.001 286.375);
+
+  --accent2: color-mix(in oklab, var(--accent) 50%, transparent);
 
   /* zinc-400 */
   --ring: oklch(0.705 0.015 286.067);
+
+  --info: oklch(0.67 0.17 244.98);
 
   /* zinc-950 */
   --selection: oklch(0.141 0.005 285.823);
@@ -99,6 +107,11 @@
 
   /* zinc-400 */
   --muted-foreground: oklch(0.705 0.015 286.067);
+
+  /* zinc-800 */
+  --accent: oklch(0.274 0.006 286.033);
+
+  --accent2: color-mix(in oklab, var(--accent) 20%, transparent);
 
   /* zinc-500 */
   --ring: oklch(0.552 0.016 285.938);
