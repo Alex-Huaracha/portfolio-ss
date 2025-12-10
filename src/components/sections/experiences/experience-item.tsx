@@ -6,7 +6,16 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
     <div className="screen-line-after space-y-4 py-4">
       <div className="flex items-center gap-3">
         <div className="flex size-6 shrink-0 items-center justify-center select-none">
-          <span className="flex size-2 rounded-full bg-zinc-300 dark:bg-zinc-600" />
+          {experience.companyLogo ? (
+            <img
+              src={experience.companyLogo}
+              alt={`${experience.companyName} logo`}
+              className="rounded-full"
+              aria-hidden
+            />
+          ) : (
+            <span className="flex size-2 rounded-full bg-zinc-300 dark:bg-zinc-600" />
+          )}
         </div>
         <h3 className="text-lg leading-snug font-medium">
           {experience.companyName}
