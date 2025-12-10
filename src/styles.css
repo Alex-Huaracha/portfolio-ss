@@ -30,6 +30,14 @@
 
   --color-selection: var(--selection);
   --color-selection-foreground: var(--selection-foreground);
+
+  --animate-collapsible-fade-down: collapsible-down var(--tw-duration, 200ms)
+      ease-out,
+    fade-in var(--tw-duration, 200ms) ease-out;
+
+  --animate-collapsible-fade-up: collapsible-up var(--tw-duration, 200ms)
+      ease-out,
+    fade-out var(--tw-duration, 200ms) ease-out;
 }
 
 /* Light theme (default) */
