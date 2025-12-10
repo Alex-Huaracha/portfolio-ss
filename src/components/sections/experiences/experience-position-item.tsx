@@ -2,8 +2,12 @@ import { cn } from '../../../lib/utils';
 import type { ExperiencePosition } from '../../../types/experiences';
 import * as Collapsible from '@radix-ui/react-collapsible';
 import { ExperienceIcon } from './experience-position-icon';
-import { ChevronsDownUp, ChevronsUpDown } from 'lucide-react';
+import { ChevronsDownUp, ChevronsUpDown, InfinityIcon } from 'lucide-react';
 import React from 'react';
+import { Separator } from '../../ui/separator';
+import { ProseMono } from '../../ui/typography';
+import { Markdown } from '../../markdown';
+import { Tag } from '../../ui/tag';
 export function ExperiencePositionItem({
   position,
 }: {
@@ -15,7 +19,11 @@ export function ExperiencePositionItem({
   const isOngoing = !end;
 
   return (
-    <Collapsible.Root defaultOpen={position.isExpanded} onOpenChange={setOpen}>
+    <Collapsible.Root
+      defaultOpen={position.isExpanded}
+      onOpenChange={setOpen}
+      asChild
+    >
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
         <Collapsible.Trigger
           className={cn(
@@ -41,20 +49,66 @@ export function ExperiencePositionItem({
               className="shrink-0 text-muted-foreground [&_svg]:size-4"
               aria-hidden
             >
-              {/* ICONO 1: Visible por defecto. Se OCULTA (hidden) cuando está abierto */}
-              <ChevronsUpDown className="size-4 group-data-[state=open]:hidden" />
-
-              {/* ICONO 2: Oculto por defecto (hidden). Se MUESTRA (block) cuando está abierto */}
-              <ChevronsDownUp className="size-4 hidden group-data-[state=open]:block" />
-
-              <button className="inline-flex size-[25px] items-center justify-center rounded-full text-violet11 shadow-[0_2px_10px] shadow-blackA4 outline-none hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-black data-[state=closed]:bg-white data-[state=open]:bg-violet3">
-                {open ? <ChevronsUpDown /> : <ChevronsDownUp />}
-              </button>
+              {/* Solo deja estos dos, controlados por CSS */}
+              {open ? (
+                <ChevronsDownUp className="size-4  group-data-[state=open]:block" />
+              ) : (
+                <ChevronsUpDown className="size-4 group-data-[state=open]:hidden" />
+              )}
             </div>
+          </div>
+          <div className="flex items-center gap-2 pl-9 text-sm text-muted-foreground">
+            {position.employmentType && (
+              <>
+                <dl>
+                  <dt className="sr-only">Employment Type</dt>
+                  <dd>{position.employmentType}</dd>
+                </dl>
+
+                <Separator
+                  className="data-[orientation=vertical]:h-4"
+                  orientation="vertical"
+                />
+              </>
+            )}
+            <dl>
+              <dt className="sr-only">Employment Period</dt>
+              <dd className="flex items-center gap-0.5">
+                <span>{start}</span>
+                <span className="font-mono">—</span>
+                {isOngoing ? (
+                  <>
+                    <InfinityIcon
+                      className="size-4.5 translate-y-[0.5px]"
+                      aria-hidden
+                    />
+                    <span className="sr-only">Present</span>
+                  </>
+                ) : (
+                  <span>{end}</span>
+                )}
+              </dd>
+            </dl>
           </div>
         </Collapsible.Trigger>
 
-        <Collapsible.Content />
+        <Collapsible.Content className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-fade-up data-[state=open]:animate-collapsible-fade-down">
+          {position.description && (
+            <ProseMono className="pt-2 pl-9">
+              <Markdown>{position.description}</Markdown>
+            </ProseMono>
+          )}
+
+          {Array.isArray(position.skills) && position.skills.length > 0 && (
+            <ul className="flex flex-wrap gap-1.5 pt-2 pl-9">
+              {position.skills.map((skill, index) => (
+                <li key={index} className="flex">
+                  <Tag>{skill}</Tag>
+                </li>
+              ))}
+            </ul>
+          )}
+        </Collapsible.Content>
       </div>
     </Collapsible.Root>
   );
