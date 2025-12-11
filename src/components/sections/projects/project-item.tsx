@@ -1,7 +1,8 @@
 import * as Collapsible from '@radix-ui/react-collapsible';
 import type { Project } from '../../../types/projects';
-import { BoxIcon, InfinityIcon } from 'lucide-react';
+import { BoxIcon, InfinityIcon, LinkIcon } from 'lucide-react';
 import { CollapsibleTrigger } from '../../ui/collapsible';
+import { Tooltip, TooltipContent, TooltipTrigger } from '../../ui/tooltip';
 
 export function ProjectItem({
   className,
@@ -64,6 +65,24 @@ export function ProjectItem({
                   </dd>
                 </dl>
               </div>
+
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <LinkIcon className="pointer-events-none size-4" />
+                    <span className="sr-only">Open Project Link</span>
+                  </a>
+                </TooltipTrigger>
+
+                <TooltipContent>
+                  <p>Open Project Link</p>
+                </TooltipContent>
+              </Tooltip>
             </CollapsibleTrigger>
           </div>
         </div>
