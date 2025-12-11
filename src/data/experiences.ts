@@ -38,11 +38,11 @@ export const EXPERIENCES: Experience[] = [
       },
       {
         id: 'd8a37834-9496-438f-b8a6-2a29c9e0a344',
-        title: 'Artificial Intelligence Research Assistant',
+        title: 'SMARQ Project (Gov. Funded)',
         employmentPeriod: {
           start: '04.2025',
         },
-        employmentType: 'SMARQ Project (Gov. Funded)',
+        employmentType: 'AI Research Assistant',
         icon: 'idea',
         description: `
 - Collaborated in the "SMART MOBILITY AREQUIPA" project, developing AI solutions for the Integrated Transport System (SIT).
