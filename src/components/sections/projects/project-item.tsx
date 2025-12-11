@@ -15,6 +15,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '../../ui/tooltip';
 import React from 'react';
 import { ProseMono } from '../../ui/typography';
 import { Markdown } from '../../markdown';
+import { Tag } from '../../ui/tag';
 
 export function ProjectItem({
   className,
@@ -121,6 +122,16 @@ export function ProjectItem({
                 <ProseMono>
                   <Markdown>{project.description}</Markdown>
                 </ProseMono>
+              )}
+
+              {project.skills.length > 0 && (
+                <ul className="flex flex-wrap gap-1.5">
+                  {project.skills.map((skill, index) => (
+                    <li key={index} className="flex">
+                      <Tag>{skill}</Tag>
+                    </li>
+                  ))}
+                </ul>
               )}
             </div>
           </div>
