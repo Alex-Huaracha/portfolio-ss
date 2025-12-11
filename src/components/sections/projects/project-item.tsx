@@ -1,8 +1,15 @@
 import * as Collapsible from '@radix-ui/react-collapsible';
 import type { Project } from '../../../types/projects';
-import { BoxIcon, InfinityIcon, LinkIcon } from 'lucide-react';
+import {
+  BoxIcon,
+  ChevronsDownUp,
+  ChevronsUpDown,
+  InfinityIcon,
+  LinkIcon,
+} from 'lucide-react';
 import { CollapsibleTrigger } from '../../ui/collapsible';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../../ui/tooltip';
+import React from 'react';
 
 export function ProjectItem({
   className,
@@ -11,12 +18,17 @@ export function ProjectItem({
   className?: string;
   project: Project;
 }) {
+  const [open, setOpen] = React.useState(false);
   const { start, end } = project.period;
   const isOngoing = !end;
   const isSinglePeriod = end === start;
 
   return (
-    <Collapsible.Root defaultOpen={project.isExpanded} asChild>
+    <Collapsible.Root
+      defaultOpen={project.isExpanded}
+      onOpenChange={setOpen}
+      asChild
+    >
       <div className={className}>
         <div className="flex items-center hover:bg-accent2">
           {project.logo ? (
@@ -83,6 +95,17 @@ export function ProjectItem({
                   <p>Open Project Link</p>
                 </TooltipContent>
               </Tooltip>
+
+              <div
+                className="shrink-0 text-muted-foreground [&_svg]:size-4"
+                aria-hidden
+              >
+                {open ? (
+                  <ChevronsDownUp className="size-4  group-data-[state=open]:block" />
+                ) : (
+                  <ChevronsUpDown className="size-4 group-data-[state=open]:hidden" />
+                )}
+              </div>
             </CollapsibleTrigger>
           </div>
         </div>
