@@ -7,6 +7,7 @@ import { About } from './components/sections/about';
 import { ThemeToggle } from './components/ui/theme-toggle';
 import { TechStack } from './components/sections/tech-stack';
 import { Experiences } from './components/sections/experiences';
+import { Projects } from './components/sections/projects';
 
 export default function App() {
   return (
@@ -30,6 +31,9 @@ export default function App() {
         <Separator />
 
         <Experiences />
+        <Separator />
+
+        <Projects />
         <Separator />
       </div>
     </main>
