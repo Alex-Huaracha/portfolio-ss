@@ -1,4 +1,3 @@
-import * as Collapsible from '@radix-ui/react-collapsible';
 import type { Project } from '../../../types/projects';
 import {
   BoxIcon,
@@ -7,9 +6,15 @@ import {
   InfinityIcon,
   LinkIcon,
 } from 'lucide-react';
-import { CollapsibleTrigger } from '../../ui/collapsible';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '../../ui/collapsible';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../../ui/tooltip';
 import React from 'react';
+import { ProseMono } from '../../ui/typography';
+import { Markdown } from '../../markdown';
 
 export function ProjectItem({
   className,
@@ -24,7 +29,7 @@ export function ProjectItem({
   const isSinglePeriod = end === start;
 
   return (
-    <Collapsible.Root
+    <Collapsible
       defaultOpen={project.isExpanded}
       onOpenChange={setOpen}
       asChild
@@ -109,7 +114,18 @@ export function ProjectItem({
             </CollapsibleTrigger>
           </div>
         </div>
+        <CollapsibleContent className="group overflow-hidden duration-300 data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down">
+          <div className="border-t border-edge shadow-inner">
+            <div className="space-y-4 p-4 duration-300 group-data-[state=closed]:animate-fade-out group-data-[state=open]:animate-fade-in">
+              {project.description && (
+                <ProseMono>
+                  <Markdown>{project.description}</Markdown>
+                </ProseMono>
+              )}
+            </div>
+          </div>
+        </CollapsibleContent>
       </div>
-    </Collapsible.Root>
+    </Collapsible>
   );
 }
