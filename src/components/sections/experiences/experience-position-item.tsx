@@ -1,6 +1,10 @@
 import { cn } from '../../../lib/utils';
 import type { ExperiencePosition } from '../../../types/experiences';
-import * as Collapsible from '@radix-ui/react-collapsible';
+import {
+  Collapsible,
+  CollapsibleTrigger,
+  CollapsibleContent,
+} from '../../ui/collapsible';
 import { ExperienceIcon } from './experience-position-icon';
 import { ChevronsDownUp, ChevronsUpDown, InfinityIcon } from 'lucide-react';
 import React from 'react';
@@ -19,13 +23,13 @@ export function ExperiencePositionItem({
   const isOngoing = !end;
 
   return (
-    <Collapsible.Root
+    <Collapsible
       defaultOpen={position.isExpanded}
       onOpenChange={setOpen}
       asChild
     >
       <div className="relative last:before:absolute last:before:h-full last:before:w-4 last:before:bg-background">
-        <Collapsible.Trigger
+        <CollapsibleTrigger
           className={cn(
             'block w-full text-left',
             'relative before:absolute before:-top-1 before:-right-1 before:-bottom-1.5 before:left-7 before:-z-1 before:rounded-lg hover:before:bg-accent2'
@@ -90,9 +94,9 @@ export function ExperiencePositionItem({
               </dd>
             </dl>
           </div>
-        </Collapsible.Trigger>
+        </CollapsibleTrigger>
 
-        <Collapsible.Content className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-fade-up data-[state=open]:animate-collapsible-fade-down">
+        <CollapsibleContent className="overflow-hidden duration-300 data-[state=closed]:animate-collapsible-fade-up data-[state=open]:animate-collapsible-fade-down">
           {position.description && (
             <ProseMono className="pt-2 pl-9">
               <Markdown>{position.description}</Markdown>
@@ -108,8 +112,8 @@ export function ExperiencePositionItem({
               ))}
             </ul>
           )}
-        </Collapsible.Content>
+        </CollapsibleContent>
       </div>
-    </Collapsible.Root>
+    </Collapsible>
   );
 }
