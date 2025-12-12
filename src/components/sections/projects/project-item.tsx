@@ -3,6 +3,7 @@ import {
   BoxIcon,
   ChevronsDownUp,
   ChevronsUpDown,
+  CodeXml,
   InfinityIcon,
   LinkIcon,
 } from 'lucide-react';
@@ -84,23 +85,45 @@ export function ProjectItem({
                 </dl>
               </div>
 
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a
-                    className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <LinkIcon className="pointer-events-none size-4" />
-                    <span className="sr-only">Open Project Link</span>
-                  </a>
-                </TooltipTrigger>
+              {project.link && (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a
+                      className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <LinkIcon className="pointer-events-none size-4" />
+                      <span className="sr-only">Open Project Link</span>
+                    </a>
+                  </TooltipTrigger>
 
-                <TooltipContent>
-                  <p>Open Project Link</p>
-                </TooltipContent>
-              </Tooltip>
+                  <TooltipContent>
+                    <p>Open Project Link</p>
+                  </TooltipContent>
+                </Tooltip>
+              )}
+
+              {project.repository && (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a
+                      className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
+                      href={project.repository}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <CodeXml className="pointer-events-none size-4" />
+                      <span className="sr-only">Open Project Source Code</span>
+                    </a>
+                  </TooltipTrigger>
+
+                  <TooltipContent>
+                    <p>Open Project Source Code</p>
+                  </TooltipContent>
+                </Tooltip>
+              )}
 
               <div
                 className="shrink-0 text-muted-foreground [&_svg]:size-4"
