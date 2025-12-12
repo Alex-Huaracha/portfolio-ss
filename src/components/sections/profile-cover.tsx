@@ -1,5 +1,5 @@
 import { cn } from '../../lib/utils';
-import { AlexHuarachaMark } from '../ui/alexhuarahca-mark';
+import { AlexHuarachaMark } from '../ui/brand-svg/';
 
 export function ProfileCover() {
   return (
