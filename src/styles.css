@@ -13,6 +13,10 @@
   .screen-line-after {
     @apply relative after:absolute after:bottom-0 after:-left-[100vw] after:-z-10 after:h-px after:w-[200vw] after:bg-edge;
   }
+
+  .link {
+    @apply font-medium underline underline-offset-4;
+  }
 }
 
 @theme inline {
@@ -30,6 +34,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-ring: var(--ring);
   --color-info: var(--info);
+
+  --color-link: var(--link);
 
   --color-selection: var(--selection);
   --color-selection-foreground: var(--selection-foreground);
@@ -79,6 +85,9 @@
 
   --info: oklch(0.67 0.17 244.98);
 
+  /* blue-700 */
+  --link: oklch(0.488 0.243 264.376);
+
   /* zinc-950 */
   --selection: oklch(0.141 0.005 285.823);
 
@@ -115,6 +124,9 @@
 
   /* zinc-500 */
   --ring: oklch(0.552 0.016 285.938);
+
+  /* blue-500 */
+  --link: oklch(0.623 0.214 259.815);
 
   /* zinc-50 */
   --selection: oklch(0.985 0 0);

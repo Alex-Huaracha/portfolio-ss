@@ -9,38 +9,42 @@ import { TechStack } from './components/sections/tech-stack';
 import { Experiences } from './components/sections/experiences';
 import { Projects } from './components/sections/projects';
 import { Brand } from './components/sections/brand';
+import { SiteFooter } from './components/layout/site-footer';
 
 export default function App() {
   return (
-    <main className="max-w-screen overflow-x-hidden px-2">
-      <div className="mx-auto md:max-w-3xl *:[[id]]:scroll-mt-22">
-        <ThemeToggle />
-        <ProfileCover />
-        <ProfileHeader />
-        <Separator />
+    <>
+      <main className="max-w-screen overflow-x-hidden px-2">
+        <div className="mx-auto md:max-w-3xl *:[[id]]:scroll-mt-22">
+          <ThemeToggle />
+          <ProfileCover />
+          <ProfileHeader />
+          <Separator />
 
-        <Overview />
-        <Separator />
+          <Overview />
+          <Separator />
 
-        <SocialLinks />
-        <Separator />
+          <SocialLinks />
+          <Separator />
 
-        <About />
-        <Separator />
+          <About />
+          <Separator />
 
-        <TechStack />
-        <Separator />
+          <TechStack />
+          <Separator />
 
-        <Experiences />
-        <Separator />
+          <Experiences />
+          <Separator />
 
-        <Projects />
-        <Separator />
+          <Projects />
+          <Separator />
 
-        <Brand />
-        <Separator />
-      </div>
-    </main>
+          <Brand />
+          <Separator />
+        </div>
+      </main>
+      <SiteFooter />
+    </>
   );
 }
 
