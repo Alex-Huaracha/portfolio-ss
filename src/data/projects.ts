@@ -1,6 +1,7 @@
 import type { Project } from '../types/projects';
 
 export const PROJECTS: Project[] = [
+  // Spotter
   {
     id: 'spotter-project',
     title: 'Spotter',
@@ -9,6 +10,7 @@ export const PROJECTS: Project[] = [
       end: '12.2025',
     },
     link: 'https://spotter-project-pi.vercel.app/',
+    repository: 'https://github.com/Alex-Huaracha/spotter-project',
     skills: [
       'Open Source',
       'Node.js',
@@ -22,13 +24,264 @@ export const PROJECTS: Project[] = [
       'Zod Validation',
     ],
     description: `
-- Engineered a full-stack social media application for fitness enthusiasts using the latest ecosystem standards (**React 19** & **Express 5**).
-- Architected a complex relational database schema with **PostgreSQL** and **Prisma ORM** to handle recursive data structures (threaded comments), social graphs (followers/following), and polymorphic interactions (likes).
-- Implemented secure **Session-Based Authentication** using Passport.js and bcrypt, ensuring persistent and protected user sessions.
-- Developed a dynamic "Personalized Feed" algorithm that aggregates and sorts content based on the user's social connections.
-- Built a high-performance, responsive UI with **Tailwind CSS v4** and **Vite**, optimizing load times and interactivity.
+A full-stack social media platform for fitness enthusiasts to share workouts, connect with gym buddies, and track their fitness journey. / Full-Stack by me
+
+Features:
+- 🔐 Authentication (register, login, session-based)
+- 📝 Create, edit, delete posts (280 char limit)
+- 💬 Comment on posts (threaded replies)
+- ❤️ Like/unlike posts and comments
+- 👤 User profiles with customizable bio, goals, and avatar
+- 👥 Follow/unfollow users
+- 📰 Personalized feed with posts from followed users
+- 🔍 User suggestions (who to follow)
 `,
     logo: '/public/icons-project/the-odin-project.svg',
     isExpanded: true,
+  },
+  // Find Me - Pokemon Edition
+  {
+    id: 'find-me-project',
+    title: 'Find Me - Pokemon Edition',
+    period: {
+      start: '11.2025',
+      end: '11.2025',
+    },
+    link: 'https://find-me-five-lilac.vercel.app/',
+    repository: 'https://github.com/Alex-Huaracha/find-me',
+    skills: ['React', 'CSS3', 'Node.js', 'Prisma ORM', 'PostgreSQL', 'Express'],
+    description: `
+A "Where's Waldo?" style game featuring Pokemon characters. Find all hidden Pokemon as fast as you can and compete on the leaderboard.
+
+Features:
+- 🎮 Interactive Pokemon search game
+- ⏱️ Real-time timer
+- 🏆 Leaderboard system
+- 📱 Responsive design
+`,
+    logo: '/public/icons-project/pokemon-project.svg',
+  },
+  // CV Forge
+  {
+    id: 'cv-forge-project',
+    title: 'CV Forge',
+    period: {
+      start: '10.2025',
+      end: '10.2025',
+    },
+    link: 'https://cv-forge-one.vercel.app',
+    repository: 'https://github.com/Alex-Huaracha/cv-forge',
+    skills: ['React', 'CSS3', 'Vite', '@react-pdf/renderer'],
+    description: `
+A modern CV/resume builder built with React and Vite. Create, edit, and download professional resumes in PDF format.
+
+Features:
+- ⚡ **Real-time preview** - See changes as you type
+- 📝 **PDF export** - Download your CV as a high-quality PDF
+- 📱 **Responsive design** - Works on desktop, tablet, and mobile
+- 📂 **Sections included:**
+  - 👤 Personal Information
+  - 🎓 Education
+  - 💼 Work Experience
+  - 🗂️ Projects
+  - 🛠️ Technical Skills
+`,
+    logo: '/public/icons-project/cv-forge-project.svg',
+  },
+  // Gym Blog API
+  {
+    id: 'gym-blog-project',
+    title: 'Gym Blog API',
+    period: {
+      start: '11.2025',
+      end: '11.2025',
+    },
+    link: 'https://gym-blog-chi.vercel.app/',
+    repository: 'https://github.com/Alex-Huaracha/gym-blog',
+    skills: [
+      'React',
+      'Tailwind',
+      'React Router',
+      'Node.js',
+      'Express',
+      'JWT Authentication',
+      'bycrypt Password Hashing',
+    ],
+    description: `
+A full-stack blog application for fitness content with separate client and admin interfaces.
+
+Client App:
+- 📖 View published blog posts
+- 📰 Read full articles with comments
+- 🔐 User registration and login
+- 💬 Post comments (authenticated users only)
+
+Admin App:
+- 🔒 Secure admin authentication
+- ✏️ Create, edit, and delete posts
+- 📤 Manage post publication status
+- 📋 View all posts (published and drafts)
+`,
+  },
+  // File Uploader
+  {
+    id: 'file-uploader-project',
+    title: 'File Uploader',
+    period: {
+      start: '11.2025',
+      end: '11.2025',
+    },
+    link: 'https://file-uploader-9zcg.onrender.com/',
+    repository: 'https://github.com/Alex-Huaracha/file-uploader',
+    skills: [
+      'Cloudinary',
+      'React',
+      'Tailwind',
+      'React Router',
+      'Node.js',
+      'Express',
+      'JWT Authentication',
+      'bycrypt Password Hashing',
+    ],
+    description: `
+A minimalist cloud storage application built with Node.js, Express, and Prisma. Upload, organize, and share your files securely.
+
+Features:
+- 🔐 Authentication - Secure login and registration with Passport.js
+- 📂 Folder Management - Create, rename, and organize folders
+- 📤 File Upload - Upload files to cloud storage (Cloudinary)
+- 🔗 Share Links - Generate time-limited share links for folders
+- 🎨 Dark Theme - Minimalist dark UI design
+`,
+  },
+  // Messaging App
+  {
+    id: 'messaging-project',
+    title: 'Messaging App',
+    period: {
+      start: '11.2025',
+      end: '11.2025',
+    },
+    repository: 'https://github.com/Alex-Huaracha/messaging-app',
+    skills: [
+      'Express',
+      'Node.js',
+      'Prisma ORM',
+      'JWT Authentication',
+      'bycrypt Password Hashing',
+      'PostgreSQL',
+      'JavaScript',
+      'React',
+      'Tailwind CSS',
+      'Zod Validation',
+    ],
+    description: `
+A real-time messaging application built with React and Express.
+- 🔐 User authentication (signup/login)
+- 👥 Real-time messaging with polling
+- 💬 User list and conversation history
+- 💎 Glassmorphism UI design
+`,
+  },
+  // The Speakeasy
+  {
+    id: 'the-speakeasy-project',
+    title: 'The Speakeasy',
+    period: {
+      start: '11.2025',
+      end: '11.2025',
+    },
+    link: 'https://the-speakeasy.onrender.com',
+    repository: 'https://github.com/Alex-Huaracha/the-speakeasy',
+    skills: [
+      'Node.js',
+      'Express',
+      'PostgreSQL',
+      'EJS',
+      'Passport.js',
+      'bycrypt Password Hashing',
+      'Express Sessions',
+      'Express Validation',
+    ],
+    description: `
+A members-only clubhouse web application where users can write anonymous posts. Only members can see who wrote which post, and only admins can delete messages.
+
+Features:
+- 🔐 User Authentication: Sign up, log in, and log out functionality
+- 🏷️ Membership System: Users can join the club with a secret passcode
+- 🕵️ Anonymous Posts: Non-members see posts as anonymous
+- 👤 Member Privileges: Members can see post authors and timestamps
+- 🛡️ Admin Controls: Admins can delete any message
+- 🔒 Secure: Password hashing with bcrypt and session-based authentication
+`,
+  },
+  // Homepage Project
+  {
+    id: 'homepage-project',
+    title: 'Homepage Project',
+    period: {
+      start: '10.2025',
+      end: '10.2025',
+    },
+    link: 'https://alex-huaracha.github.io/homepage/',
+    repository: 'https://github.com/Alex-Huaracha/homepage',
+    skills: ['html', 'CSS3', 'JavaScript', 'Webpack'],
+    description: `
+This is a responsive personal homepage built with HTML, CSS, and JavaScript, using Webpack for asset management and bundling.
+
+Features:
+- 📱 Mobile-first, fully responsive design
+- 🗂️ Dynamic project section (projects managed via JavaScript)
+- 🖼️ SVG icons for navigation and social links
+- 🌙 Dark theme support
+- 🧹 Clean, accessible layout
+`,
+    logo: '/public/icons-project/homepage-project.svg',
+  },
+  // Battleship Game Project
+  {
+    id: 'battleship-game-project',
+    title: 'Battleship Game',
+    period: {
+      start: '10.2025',
+      end: '10.2025',
+    },
+    link: 'https://alex-huaracha.github.io/battleship/',
+    repository: 'https://github.com/Alex-Huaracha/battleship',
+    skills: ['html', 'CSS3', 'JavaScript', 'Webpack'],
+    description: `
+A classic Battleship game built with vanilla JavaScript as part of The Odin Project curriculum.
+
+Features:
+- 🗺️ 10x10 grid with traditional ship placement
+- 🤖 Smart AI opponent with hunt/target/destroy strategy
+- 🎲 Manual or random ship placement
+- 🎯 Visual feedback for hits, misses, and sunk ships
+- 📱 Responsive design for desktop and mobile
+`,
+    logo: '/public/icons-project/battleships-project.svg',
+  },
+  // Weather App
+  {
+    id: 'weather-app-project',
+    title: 'Weather App',
+    period: {
+      start: '09.2025',
+      end: '09.2025',
+    },
+    link: 'https://alex-huaracha.github.io/weather-app/',
+    repository: 'https://github.com/Alex-Huaracha/weather-app',
+    skills: ['Webpack', 'React', 'html', 'CSS', 'Fetch API'],
+    description: `
+A web application to check current weather and 5-day forecast for any city, using the Visual Crossing API.
+
+Features:
+- 📍 Search by location
+- 📅 5-day forecast
+- 🔄 Toggle between Celsius and Fahrenheit
+- 🌤️ Weather icons and detailed data
+- 📱 Responsive, modern design
+`,
+    logo: '/public/icons-project/weather-project.svg',
   },
 ];
