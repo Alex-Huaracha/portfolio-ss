@@ -314,4 +314,19 @@ Features:
 `,
     logo: '/icons-project/weather-project.svg',
   },
+  // Prev Portfolio
+  {
+    id: 'previous-portfolio-project',
+    title: 'Previous Portfolio',
+    period: {
+      start: '07.2025',
+      end: '07.2025',
+    },
+    link: 'https://portfolio-khaki-seven-93.vercel.app',
+    repository: 'https://github.com/Alex-Huaracha/portfolio',
+    skills: ['Next.js', 'React', 'Tailwind', 'TypeScript'],
+    description: `
+This was my previous developer portfolio website, showcasing my projects and skills.`,
+    logo: '/icons-project/prev-portfolio-project.svg',
+  },
 ];
