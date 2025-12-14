@@ -1,6 +1,37 @@
 import type { Project } from '../types/projects';
 
 export const PROJECTS: Project[] = [
+  // Alex Huaracha Portfolio
+  {
+    id: 'portfolio-project',
+    title: 'alexhuaracha.vercel.app',
+    period: {
+      start: '12.2025',
+    },
+    link: 'https://alexh-portfolio.vercel.app/',
+    repository: '',
+    skills: [
+      'TypeScript',
+      'Tailwind CSS',
+      'React',
+      'react-markdown',
+      '@radix-ui',
+      'clsx',
+      'Vercel',
+    ],
+    description: `
+A minimal, dev portfolio.
+
+Featured:
+- Clean & modern design
+- Light/Dark themes
+- vCard integration
+- SEO optimized (JSON-LD schema, sitemap, robots) -> Ongoing
+- Spam-protected email and phone number
+`,
+    isExpanded: true,
+    logo: '/ah-icon.svg',
+  },
   // Spotter
   {
     id: 'spotter-project',
@@ -36,8 +67,7 @@ Features:
 - 📰 Personalized feed with posts from followed users
 - 🔍 User suggestions (who to follow)
 `,
-    logo: '/public/icons-project/the-odin-project.svg',
-    isExpanded: true,
+    logo: '/icons-project/the-odin-project.svg',
   },
   // Find Me - Pokemon Edition
   {
@@ -59,7 +89,7 @@ Features:
 - 🏆 Leaderboard system
 - 📱 Responsive design
 `,
-    logo: '/public/icons-project/pokemon-project.svg',
+    logo: '/icons-project/pokemon-project.svg',
   },
   // CV Forge
   {
@@ -86,7 +116,7 @@ Features:
   - 🗂️ Projects
   - 🛠️ Technical Skills
 `,
-    logo: '/public/icons-project/cv-forge-project.svg',
+    logo: '/icons-project/cv-forge-project.svg',
   },
   // Gym Blog API
   {
@@ -236,7 +266,7 @@ Features:
 - 🌙 Dark theme support
 - 🧹 Clean, accessible layout
 `,
-    logo: '/public/icons-project/homepage-project.svg',
+    logo: '/icons-project/homepage-project.svg',
   },
   // Battleship Game Project
   {
@@ -259,7 +289,7 @@ Features:
 - 🎯 Visual feedback for hits, misses, and sunk ships
 - 📱 Responsive design for desktop and mobile
 `,
-    logo: '/public/icons-project/battleships-project.svg',
+    logo: '/icons-project/battleships-project.svg',
   },
   // Weather App
   {
@@ -282,6 +312,6 @@ Features:
 - 🌤️ Weather icons and detailed data
 - 📱 Responsive, modern design
 `,
-    logo: '/public/icons-project/weather-project.svg',
+    logo: '/icons-project/weather-project.svg',
   },
 ];
