@@ -8,7 +8,7 @@ export const PROJECTS: Project[] = [
     period: {
       start: '12.2025',
     },
-    link: 'https://alexh-portfolio.vercel.app/',
+    link: 'https://alexhuaracha.vercel.app',
     repository: '',
     skills: [
       'TypeScript',

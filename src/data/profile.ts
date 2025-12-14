@@ -14,7 +14,7 @@ export const PROFILE: User = {
   address: 'Arequipa City, Perú',
   phoneNumber: 'KzUxOTYyMzM0NzEy',
   email: 'YWxleGh1YXJhY2hhcUBnbWFpbC5jb20=',
-  website: '----',
+  website: 'https://alexhuaracha.vercel.app',
   jobTitle: 'Backend Developer',
   jobs: [
     {
