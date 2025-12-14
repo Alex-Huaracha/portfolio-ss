@@ -40,7 +40,7 @@ export const EXPERIENCES: Experience[] = [
         id: 'd8a37834-9496-438f-b8a6-2a29c9e0a344',
         title: 'SMARQ Project (Gov. Funded)',
         employmentPeriod: {
-          start: '04.2025',
+          start: '05.2025',
         },
         employmentType: 'AI Research Assistant',
         icon: 'idea',
