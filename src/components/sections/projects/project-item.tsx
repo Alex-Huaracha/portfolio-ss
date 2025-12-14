@@ -95,12 +95,12 @@ export function ProjectItem({
                       rel="noopener"
                     >
                       <LinkIcon className="pointer-events-none size-4" />
-                      <span className="sr-only">Open Project Link</span>
+                      <span className="sr-only">View Live Project</span>
                     </a>
                   </TooltipTrigger>
 
                   <TooltipContent>
-                    <p>Open Project Link</p>
+                    <p>View Live Project</p>
                   </TooltipContent>
                 </Tooltip>
               )}
@@ -115,12 +115,12 @@ export function ProjectItem({
                       rel="noopener"
                     >
                       <CodeXml className="pointer-events-none size-4" />
-                      <span className="sr-only">Open Project Source Code</span>
+                      <span className="sr-only">View Source Code</span>
                     </a>
                   </TooltipTrigger>
 
                   <TooltipContent>
-                    <p>Open Project Source Code</p>
+                    <p>View Source Code</p>
                   </TooltipContent>
                 </Tooltip>
               )}
