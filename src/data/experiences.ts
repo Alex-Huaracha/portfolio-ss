@@ -13,7 +13,7 @@ export const EXPERIENCES: Experience[] = [
         title: 'Backend Development Intern',
         employmentPeriod: {
           start: '08.2024',
-          end: '05.2025',
+          end: '07.2025',
         },
         employmentType: 'Internship',
         icon: 'code',
@@ -46,10 +46,10 @@ export const EXPERIENCES: Experience[] = [
         icon: 'idea',
         description: `
 - Collaborated in the "SMART MOBILITY AREQUIPA" project, developing AI solutions for the Integrated Transport System (SIT).
-- Engineered a **Deep Learning** framework using **LSTM Autoencoders** [cite: 27, 156] to detect anomalies in real-time, processing over **32 million GPS records**.
+- Engineered a **Deep Learning** framework using **LSTM Autoencoders** to detect anomalies in real-time, processing over **32 million GPS records**.
 - Authored the technical paper *"Multi-Unit Unified GPS Framework"* (currently under internal review), documenting a novel Multi-Unit processing approach.
-- Achieved a **53.7% improvement** in detection accuracy compared to traditional statistical baselines [cite: 9, 357] by implementing a global consensus algorithm.
-- Utilized **Python**, **TensorFlow**, and **Pandas** to build the data pipeline[cite: 312, 313], optimizing the model for scalability on standard hardware.
+- Achieved a **53.7% improvement** in detection accuracy compared to traditional statistical baselines by implementing a global consensus algorithm.
+- Utilized **Python**, **TensorFlow**, and **Pandas** to build the data pipeline, optimizing the model for scalability on standard hardware.
 `,
         skills: [
           'Python',
@@ -67,29 +67,41 @@ export const EXPERIENCES: Experience[] = [
     isCurrentEmployer: true,
   },
 
-  //   // FREELANCE
-  //   {
-  //     id: 'freelance',
-  //     companyName: 'Freelance Projects',
-  //     positions: [
-  //       {
-  //         id: '',
-  //         title: 'Full-Stack Developer',
-  //         employmentPeriod: {
-  //           start: '03.2025',
-  //           end: '07.2025',
-  //         },
-  //         employmentType: 'Part-time',
-  //         icon: 'code',
-  //         description: `
-  // - Built an order management website with real-time delivery tracking.
-  // - Developed an e-commerce site for bird's nest products.
+  // FREELANCE PROJECTS
+  {
+    id: 'freelance',
+    companyName: 'Freelance ',
+    positions: [
+      {
+        id: '',
+        title: 'Backend Developer',
+        employmentPeriod: {
+          start: '07.2025',
+          end: '11.2025',
+        },
+        employmentType: 'Part-time',
+        icon: 'code',
+        description: `
+Architected and developed a scalable **Microservices E-commerce Platform** using **Node.js** and **Docker**.
 
-  // `,
-  //         skills: [],
-  //       },
-  //     ],
-  //   },
+* **System Design:** Orchestrated isolated services (Auth, Product, Order) through a unified **API Gateway** pattern.
+* **Event-Driven Architecture:** Implemented asynchronous communication and background jobs using **Redis** and **Bull Queues** for high-performance notification handling.
+* **Data & Security:** Managed persistent data with **PostgreSQL** and **Prisma ORM**, securing endpoints with **JWT** (access/refresh tokens) and Role-Based Access Control (RBAC).
+* **Infrastructure:** Containerized the entire ecosystem with **Docker Compose** for consistent deployment environments.`,
+        skills: [
+          'Microservices',
+          'Node.js',
+          'Docker',
+          'Redis',
+          'PostgreSQL',
+          'Event-Driven Architecture',
+          'System Design',
+          'Prisma',
+          'API Gateway',
+        ],
+      },
+    ],
+  },
 
   // EDUCATION
   {
