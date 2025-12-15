@@ -1,5 +1,5 @@
 import { PROFILE } from '../../data/profile';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
 import profileImage from '../../assets/img/profile.avif';
 
