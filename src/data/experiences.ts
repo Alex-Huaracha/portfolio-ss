@@ -4,7 +4,7 @@ export const EXPERIENCES: Experience[] = [
   // WORK EXPERIENCES
   {
     id: 'fips',
-    companyName: 'National University of San Agustin - FIPS',
+    companyName: 'National University of San Agustin',
     companyLogo:
       'https://upload.wikimedia.org/wikipedia/commons/f/f9/Escudo_UNSA.png',
     positions: [
@@ -38,14 +38,16 @@ export const EXPERIENCES: Experience[] = [
       },
       {
         id: 'd8a37834-9496-438f-b8a6-2a29c9e0a344',
-        title: 'SMARQ Project (Gov. Funded)',
+        title: 'AI Research Assistant',
         employmentPeriod: {
           start: '05.2025',
         },
-        employmentType: 'AI Research Assistant',
-        icon: 'idea',
+        employmentType: 'Contract / Research',
+        icon: 'brain',
         description: `
-- Collaborated in the "SMART MOBILITY AREQUIPA" project, developing AI solutions for the Integrated Transport System (SIT).
+**Project: SMARQ (Smart Mobility Arequipa) - Gov. Funded**
+
+- Collaborated on developing AI solutions for the Integrated Transport System (SIT).
 - Engineered a **Deep Learning** framework using **LSTM Autoencoders** to detect anomalies in real-time, processing over **32 million GPS records**.
 - Authored the technical paper *"Multi-Unit Unified GPS Framework"* (currently under internal review), documenting a novel Multi-Unit processing approach.
 - Achieved a **53.7% improvement** in detection accuracy compared to traditional statistical baselines by implementing a global consensus algorithm.
