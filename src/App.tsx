@@ -4,19 +4,19 @@ import { ProfileHeader } from './components/sections/profile-header';
 import { Overview } from './components/sections/overview';
 import { SocialLinks } from './components/sections/social-links';
 import { About } from './components/sections/about';
-import { ThemeToggle } from './components/ui/theme-toggle';
 import { TechStack } from './components/sections/tech-stack';
 import { Experiences } from './components/sections/experiences';
 import { Projects } from './components/sections/projects';
 import { Brand } from './components/sections/brand';
 import { SiteFooter } from './components/layout/site-footer';
+import { SiteHeader } from './components/layout/site-header/site-header';
 
 export default function App() {
   return (
     <>
+      <SiteHeader />
       <main className="max-w-screen overflow-x-hidden px-2">
         <div className="mx-auto md:max-w-3xl *:[[id]]:scroll-mt-22">
-          <ThemeToggle />
           <ProfileCover />
           <ProfileHeader />
           <Separator />
