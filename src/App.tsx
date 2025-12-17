@@ -10,6 +10,7 @@ import { Projects } from './components/sections/projects';
 import { Brand } from './components/sections/brand';
 import { SiteFooter } from './components/layout/site-footer';
 import { SiteHeader } from './components/layout/site-header';
+import { ScrollToTop } from './components/ui/scroll-to-top';
 
 export default function App() {
   return (
@@ -44,6 +45,7 @@ export default function App() {
         </div>
       </main>
       <SiteFooter />
+      <ScrollToTop />
     </>
   );
 }

@@ -24,6 +24,8 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
 
   --color-accent: var(--accent);
   --color-accent2: var(--accent2);
@@ -62,6 +64,12 @@
 
   /* zinc-50 */
   --primary-foreground: oklch(0.985 0 0);
+
+  /* zinc-100 */
+  --secondary: oklch(0.967 0.001 286.375);
+
+  /* zinc-950 */
+  --secondary-foreground: oklch(0.141 0.005 285.823);
 
   /* zinc-200 */
   --border: oklch(0.92 0.004 286.32);
@@ -107,6 +115,12 @@
 
   /* zinc-950 */
   --primary-foreground: oklch(0.141 0.005 285.823);
+
+  /* zinc-800 */
+  --secondary: oklch(0.274 0.006 286.033);
+
+  /* zinc-50 */
+  --secondary-foreground: oklch(0.985 0 0);
 
   /* zinc-800 */
   --border: oklch(0.274 0.006 286.033);
