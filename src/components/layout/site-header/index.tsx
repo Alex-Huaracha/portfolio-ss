@@ -26,8 +26,21 @@ export function SiteHeader() {
         </a>
         <div className="flex-1" />
         <div className="flex items-center *:first:mr-2">
+          <div className="flex items-center gap-4 max-sm:hidden">
+            <a
+              href="#experience"
+              className="font-mono text-sm font-medium text-muted-foreground transition-[color] duration-300 hover:text-foreground"
+            >
+              Experience
+            </a>
+            <a
+              href="#projects"
+              className="font-mono text-sm font-medium text-muted-foreground transition-[color] duration-300 hover:text-foreground"
+            >
+              Projects
+            </a>
+          </div>
           <span className="mx-2 flex h-4 w-px bg-border" />
-
           <ThemeToggle />
         </div>
       </div>

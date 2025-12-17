@@ -154,6 +154,11 @@
     text-rendering: optimizeLegibility;
   }
 
+  /* Activate  */
+  html {
+    @apply motion-safe:scroll-smooth;
+  }
+
   ::-webkit-scrollbar {
     width: 5px;
   }

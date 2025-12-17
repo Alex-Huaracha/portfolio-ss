@@ -9,7 +9,7 @@ import { Experiences } from './components/sections/experiences';
 import { Projects } from './components/sections/projects';
 import { Brand } from './components/sections/brand';
 import { SiteFooter } from './components/layout/site-footer';
-import { SiteHeader } from './components/layout/site-header/site-header';
+import { SiteHeader } from './components/layout/site-header';
 
 export default function App() {
   return (
