@@ -3,6 +3,46 @@ import type { Experience } from '../types/experiences';
 export const EXPERIENCES: Experience[] = [
   // WORK EXPERIENCES
   {
+    id: 'hagemsa',
+    companyName: 'Hagemsa',
+    companyLogo:
+      'https://transporteshagemsa.com/wp-content/uploads/2022/10/Hagemsa-sin-Fondo.webp',
+    positions: [
+      {
+        id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
+        title: 'Full Stack Developer',
+        employmentPeriod: {
+          start: '01.2026',
+        },
+        employmentType: 'Full-time',
+        icon: 'code',
+        description: `
+- Leading the **migration of legacy systems** to modern architecture, ensuring business continuity while modernizing the technology stack.
+- Developing comprehensive **cash management system modules** including expense tracking, income processing, settlements, travel allowances, and manifests for heavy cargo transportation operations.
+- Architecting **full-stack solutions** using **React** and **Hono.js** to optimize financial and logistics workflows across multiple business units.
+- Implementing **cloud-based infrastructure** with **Firebase** and **Google Cloud Platform** to enhance scalability and system reliability.
+- Managing **MySQL databases** to handle complex transactional data for transportation and logistics operations across Latin America.
+- Collaborating with cross-functional teams to deliver robust solutions that improve operational efficiency in the heavy cargo transportation industry.
+`,
+        skills: [
+          'React',
+          'Hono.js',
+          'MySQL',
+          'Firebase',
+          'Google Cloud Platform',
+          'Full Stack Development',
+          'System Migration',
+          'Financial Systems',
+          'Logistics Software',
+          'Git',
+        ],
+        isExpanded: true,
+      },
+    ],
+    isCurrentEmployer: true,
+  },
+
+  {
     id: 'fips',
     companyName: 'National University of San Agustin',
     companyLogo:
@@ -66,7 +106,6 @@ export const EXPERIENCES: Experience[] = [
         // isExpanded: true,
       },
     ],
-    isCurrentEmployer: true,
   },
 
   // FREELANCE PROJECTS
