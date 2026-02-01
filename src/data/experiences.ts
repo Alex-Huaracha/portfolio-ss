@@ -74,7 +74,6 @@ export const EXPERIENCES: Experience[] = [
           'RBAC Security',
           'PDF Generation',
         ],
-        isExpanded: true,
       },
       {
         id: 'd8a37834-9496-438f-b8a6-2a29c9e0a344',
