@@ -4,37 +4,35 @@ export const EXPERIENCES: Experience[] = [
   // WORK EXPERIENCES
   {
     id: 'hagemsa',
-    companyName: 'Hagemsa',
+    companyName: 'Transportes Hagemsa',
     companyLogo:
       'https://transporteshagemsa.com/wp-content/uploads/2022/10/Hagemsa-sin-Fondo.webp',
     positions: [
       {
         id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567890',
-        title: 'Full Stack Developer',
+        title: 'AI Engineer',
         employmentPeriod: {
-          start: '01.2026',
+          start: '11.2025',
         },
         employmentType: 'Full-time',
-        icon: 'code',
+        icon: 'brain',
         description: `
-- Leading the **migration of legacy systems** to modern architecture, ensuring business continuity while modernizing the technology stack.
-- Developing comprehensive **cash management system modules** including expense tracking, income processing, settlements, travel allowances, and manifests for heavy cargo transportation operations.
-- Architecting **full-stack solutions** using **React** and **Hono.js** to optimize financial and logistics workflows across multiple business units.
-- Implementing **cloud-based infrastructure** with **Firebase** and **Google Cloud Platform** to enhance scalability and system reliability.
-- Managing **MySQL databases** to handle complex transactional data for transportation and logistics operations across Latin America.
-- Collaborating with cross-functional teams to deliver robust solutions that improve operational efficiency in the heavy cargo transportation industry.
+- Architected a **RAG pipeline** over **pgvector** and exposed it through a custom **MCP server**, letting LLM-powered **LangGraph** agents query enterprise records in context — cutting manual data-retrieval time across ERP workflows by **35%**.
+- Designed the core inventory and dynamic resource-allocation modules of a company-wide **ERP** on **PostgreSQL**, containerized with **Docker** and deployed to **AWS** via CI/CD, reducing operations planning overhead by **30%**.
+- Built a task-management and time-tracking module with **Redis**-backed real-time workflow monitoring, adopted across **3+ departments** — turning weekly reporting from a days-long process into hours.
 `,
         skills: [
-          'React',
-          'Hono.js',
-          'MySQL',
-          'Firebase',
-          'Google Cloud Platform',
-          'Full Stack Development',
-          'System Migration',
-          'Financial Systems',
-          'Logistics Software',
-          'Git',
+          'LLMs',
+          'RAG',
+          'MCP',
+          'LangChain',
+          'LangGraph',
+          'pgvector',
+          'PostgreSQL',
+          'Redis',
+          'Docker',
+          'AWS',
+          'CI/CD',
         ],
         isExpanded: true,
       },
@@ -49,20 +47,43 @@ export const EXPERIENCES: Experience[] = [
       'https://upload.wikimedia.org/wikipedia/commons/f/f9/Escudo_UNSA.png',
     positions: [
       {
-        id: 'e3540efe-f085-4d15-937a-e517d2883597',
-        title: 'Backend Development Intern',
+        id: 'd8a37834-9496-438f-b8a6-2a29c9e0a344',
+        title: 'AI Engineer',
         employmentPeriod: {
-          start: '08.2024',
-          end: '07.2025',
+          start: '11.2024',
+          end: '11.2025',
+        },
+        employmentType: 'Contract / Research',
+        icon: 'brain',
+        description: `
+- Engineered a spatial-temporal pipeline ingesting raw GPS logs into **MongoDB** and serving curated features from **PostgreSQL**, transforming over **25 million** raw pings into structured, ML-ready datasets for the city's public transit system.
+- Trained **LSTM** deep learning architectures to model temporal dependencies in transit patterns, improving anomaly and demand-forecasting accuracy by **40%** over baseline heuristics.
+- Benchmarked **XGBoost** against a custom **SpatialConv** neural network under **Pytest**-covered, **Docker**-containerized training pipelines for reproducible runs, raising production-model accuracy by **15%**.
+`,
+        skills: [
+          'Python',
+          'TensorFlow',
+          'Deep Learning (LSTM)',
+          'XGBoost',
+          'Pandas',
+          'MongoDB',
+          'PostgreSQL',
+          'Pytest',
+          'Docker',
+        ],
+      },
+      {
+        id: 'e3540efe-f085-4d15-937a-e517d2883597',
+        title: 'Full Stack Developer',
+        employmentPeriod: {
+          start: '10.2023',
+          end: '11.2024',
         },
         employmentType: 'Internship',
         icon: 'code',
         description: `
-- Engineered the backend for a **Requirements Engineering Automation Platform**, streamlining the entire software specification lifecycle (elicitation to delivery).
-- Architected a type-safe **REST API** using **Node.js**, **Express**, and **TypeScript**, ensuring code reliability and maintainability.
-- Designed complex database schemas with **Prisma ORM** and **PostgreSQL** to manage multi-tenant Organizations, Projects, and Artifacts.
-- Implemented **Role-Based Access Control (RBAC)** and secure authentication (JWT) to manage permissions for Stakeholders and Admins.
-- Developed an automated reporting engine using **PDFKit** and **ExcelJS** to generate dynamic specification documents and acceptance records.
+- Modeled a **PostgreSQL** schema with **Prisma ORM** capturing deep dependencies across specifications and non-functional requirements, digitizing requirements-engineering workflows for **50+ concurrent projects**.
+- Automated ingestion of heterogeneous evidence files and dynamic report generation, with data isolation enforced by a multi-tiered **RBAC** layer under **Jest** integration tests, cutting manual deliverable-assembly time by **50%**.
 `,
         skills: [
           'TypeScript',
@@ -70,74 +91,34 @@ export const EXPERIENCES: Experience[] = [
           'Express',
           'Prisma ORM',
           'PostgreSQL',
-          'System Design',
           'RBAC Security',
-          'PDF Generation',
+          'Jest',
         ],
-      },
-      {
-        id: 'd8a37834-9496-438f-b8a6-2a29c9e0a344',
-        title: 'AI Research Assistant',
-        employmentPeriod: {
-          start: '05.2025',
-        },
-        employmentType: 'Contract / Research',
-        icon: 'brain',
-        description: `
-**Project: SMARQ (Smart Mobility Arequipa) - Gov. Funded**
-
-- Collaborated on developing AI solutions for the Integrated Transport System (SIT).
-- Engineered a **Deep Learning** framework using **LSTM Autoencoders** to detect anomalies in real-time, processing over **32 million GPS records**.
-- Authored the technical paper *"Multi-Unit Unified GPS Framework"* (currently under internal review), documenting a novel Multi-Unit processing approach.
-- Achieved a **53.7% improvement** in detection accuracy compared to traditional statistical baselines by implementing a global consensus algorithm.
-- Utilized **Python**, **TensorFlow**, and **Pandas** to build the data pipeline, optimizing the model for scalability on standard hardware.
-`,
-        skills: [
-          'Python',
-          'TensorFlow',
-          'Deep Learning (LSTM)',
-          'Big Data Processing',
-          'Research & Development',
-          'Anomaly Detection',
-          'Pandas/NumPy',
-          'Git',
-        ],
-        // isExpanded: true,
       },
     ],
   },
 
-  // FREELANCE PROJECTS
   {
-    id: 'freelance',
-    companyName: 'Freelance ',
+    id: 'inca-tops',
+    companyName: 'Inca Tops',
     positions: [
       {
-        id: '',
-        title: 'Backend Developer',
+        id: '5f0c8e2a-3b7d-4c1e-9a6f-2d8b4e7c1a93',
+        title: 'Full Stack Developer',
         employmentPeriod: {
-          start: '07.2025',
-          end: '11.2025',
+          start: '09.2022',
+          end: '10.2023',
         },
-        employmentType: 'Part-time',
         icon: 'code',
         description: `
-Architected and developed a scalable **Microservices E-commerce Platform** using **Node.js** and **Docker**.
-
-* **System Design:** Orchestrated isolated services (Auth, Product, Order) through a unified **API Gateway** pattern.
-* **Event-Driven Architecture:** Implemented asynchronous communication and background jobs using **Redis** and **Bull Queues** for high-performance notification handling.
-* **Data & Security:** Managed persistent data with **PostgreSQL** and **Prisma ORM**, securing endpoints with **JWT** (access/refresh tokens) and Role-Based Access Control (RBAC).
-* **Infrastructure:** Containerized the entire ecosystem with **Docker Compose** for consistent deployment environments.`,
+- Developed a supply-chain and inventory system on **MySQL** that replaced a fully paper-based process for tracking financial balances, digitizing wool procurement and payments for **100+ suppliers**.
+- Delivered dedicated tracking and quality-control modules covering fiber fineness, staple length, and yield — cutting manual grading errors by **30%** and enabling full origin traceability for thousands of wool batches.
+`,
         skills: [
-          'Microservices',
-          'Node.js',
-          'Docker',
-          'Redis',
-          'PostgreSQL',
-          'Event-Driven Architecture',
-          'System Design',
-          'Prisma',
-          'API Gateway',
+          'MySQL',
+          'Full Stack Development',
+          'Supply Chain Software',
+          'Inventory Management',
         ],
       },
     ],
